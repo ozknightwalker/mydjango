@@ -1,0 +1,32 @@
+
+{ % ifequal  test  'test' %}
+<h1>{{hello | truncatewords:"1" | upper}}</h1>
+{% endifequal % }
+<h1>{{test |length }}</h1>
+<h1>{{test}}</h1>
+<ul>
+{% for tt in tt2 %}
+        <li>{{tt |first }}</li>
+</ul>
+{% endfor %}
+
+
+{% ifequal test 'test' %}
+    <li> shabia </li>
+{% endifequal %}
+
+{% ifequal test 'test' %}
+    <h1>Site News</h1>
+{% else %}
+    <h1>No News Here</h1>
+{% endifequal %}
+
+
+<p>{{pdate|date:"Y F j" }}</p>>
+
+{%include "t1.html" %}
+
+
+
+
+

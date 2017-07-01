@@ -1,0 +1,18 @@
+<div class="login-pc">
+	<div class="login-main">
+		<div class="login-logo"><img src="/static/themes/default/images/login_logo.png" height="137" width="379" /></div>
+		<div class="login-form">
+			<div class="login-title"><img src="/static/themes/default/images/login_title.png" height="47" width="329" /></div>
+				<form id="ff" method="post" action="/login/">
+					<span>用户名</span>　<input type="text" name="txxusr" id="txxusr" style="margin-right:65px;" /> <br>
+					<span>密　码</span>　<input type="password" name="txxpwd"  id="txxpwd" onkeypress="if(event.keyCode==13) document.getElementById('loginnow').click()"/>　
+					<a href="/upload/install/rj_tu1851.exe" title="浏览器安装"><i class="icon-filesave"></i></a>
+					<input type="hidden" name="message"  id="message" value="${message}" />　
+				</form>
+			<div class="form-btns">
+		{% block mainblock %}		<a href="javascript:;" onclick="submitForm()" id="loginnow">登 录</a>　　&nbsp;{% endblock %}
+				<a href="javascript:;" onclick="clearForm()">取 消</a>
+			</div>
+		</div>
+	</div>
+</div>
