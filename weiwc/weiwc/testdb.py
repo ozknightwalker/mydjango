@@ -19,7 +19,32 @@ def testdb(request):
 
     insert_data = models.Test(user_name="weiwc", user_id=1, user_birthday="2017-01-01")
     insert_data.save()
-    return HttpResponse("<p>插入数据城功！<p/>")
+
+    all_user = models.Test.objects.all()
+
+    tt = models.Test.objects.get(id=2)
+    models.Test.objects.filter(id=1)
+    models.Test.objects.order_by("id")
+    tt = models.Test.objects.order_by("name")[0:2]
+
+    models.Test.objects.filter(id=1).update(user_name="test")
+
+    # models.Test.objects.filter(id=1).delete()
+
+
+    response = "--"
+    for user in all_user:
+        user.user_name = "weiwc" + str(user.id)
+        user.user_id = user.id
+        user.save()
+        #
+        # response += "<li>"
+        # response += "id="+ str(user.id)
+        # response += "  name="+ user.user_name
+        # response += "<li/>"
+
+
+    return HttpResponse(response)
 
 
 def main():
