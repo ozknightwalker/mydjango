@@ -31,7 +31,7 @@ def testdb(request):
 
     # models.Test.objects.filter(id=1).delete()
 
-
+    import itertools
     response = "--"
     for user in all_user:
         user.user_name = "weiwc" + str(user.id)
