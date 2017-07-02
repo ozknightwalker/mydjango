@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+<p>{{shuchu}}</p>
+<ul>
+{% for u in us %}
+<li>id = {{u.id}}, name = {{u.user_name}},  birthday = {{u.user_birthday | date:"Y-j-F"}}</li>
+{% endfor %}
+    </ul>
+</body>
+</html>

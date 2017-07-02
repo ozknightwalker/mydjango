@@ -19,6 +19,7 @@ from . import view
 from . import testdb
 from . import search
 from . import search2
+from apps.sm_user.views import add_user
 
 urlpatterns = [
     url(r'^$', view.hello),
@@ -26,4 +27,5 @@ urlpatterns = [
     url(r"^search$", search.search),
     url(r"^search_form$", search.search_form),
     url(r"^search-post$", search2.search_post),
+    url(r"^add-user$", add_user),
 ]
