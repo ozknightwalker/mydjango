@@ -117,5 +117,22 @@ def main():
     print(random.randint(1,2))
 
 
+def lo(func):
+    def wrapper(*args, **kw):
+        print("在装饰器里面")
+        f = func(*args, **kw)
+        print("在装饰器之后")
+        # return f  # 这里返回的是函数结果
+    return wrapper  # 这里返回的是函数对象
+
+@lo
+def tp():
+    print("函数")
+    return "haha"
+
+
+
 if __name__ == '__main__':
-    main()
+    # main()
+    a = tp()
+    print("a=", a)
