@@ -28,6 +28,7 @@ from apps.sm_user.views import add_user
 urlpatterns = [
     url(r"^polls/", include("polls.urls")),
     url(r'^$', view.hello),
+    url(r'^admin/', admin.site.urls),
     url(r'^testdb$', testdb.testdb),
     url(r"^search$", search.search),
     url(r"^search_form$", search.search_form),
