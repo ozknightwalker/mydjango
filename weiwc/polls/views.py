@@ -12,6 +12,7 @@ from .models import Question, Choice
 
 from django.template import loader
 
+# import redis
 # Create your views here.
 
 def index(request):
