@@ -1,3 +1,14 @@
 *.pyc
 */.idea/*
 .idea/*
+*.pyo
+.installed.cfg
+bin
+develop-eggs
+dist
+downloads
+eggs
+parts
+weiwc/*.egg-info
+weiwc/weiwc/*.egg-info
+weiwc/weiwc/.install.cfg
