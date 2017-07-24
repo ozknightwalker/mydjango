@@ -1,4 +1,4 @@
-"""weiwc URL Configuration
+"""test_auth URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -13,26 +13,10 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-
-from django.conf.urls import include, url
-
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib import admin
-import polls
-from . import view
-from . import testdb
-from . import search
-from . import search2
-from apps.sm_user.views import add_user
 
 urlpatterns = [
-    url(r"^polls/", include("polls.urls")),
-    url(r'^$', view.hello),
     url(r'^admin/', admin.site.urls),
-    url(r'^testdb$', testdb.testdb),
-    url(r"^search$", search.search),
-    url(r"^search_form$", search.search_form),
-    url(r"^search-post$", search2.search_post),
-    url(r"^add-user$", add_user),
-    url(r'account/', include('users.urls')),
+    url(r'^accounts/', include('users.urls')),
 ]
